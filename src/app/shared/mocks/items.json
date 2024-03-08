@@ -1,0 +1,24 @@
+[
+  {
+    "items": [
+      {
+        "id": "finn",
+        "name": "Finn",
+        "img": "/assets/finn.webp",
+        "description": "Finn el Humano"
+      },
+      {
+        "id": "jake",
+        "name": "Jake",
+        "img": "/assets/jake.png",
+        "description": "Jake el Perro"
+      },
+      {
+        "id": "marceline",
+        "name": "Marceline",
+        "img": "/assets/marceline.webp",
+        "description": "Marceline la Vampira"
+      }
+    ]
+  }
+]

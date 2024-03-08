@@ -1,0 +1,36 @@
+<section class="">
+    @for (character of characters; track character) {
+    <article class="flex flex-col p-4 {{character.bg}}" id="{{character.id}}">
+        <img src="{{ character.img }}" alt="" class="w-20">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{character.name}}</h5>
+        <p class="mb-3 font-normal text-white">{{character.description}}</p>
+    </article>
+    }
+</section>
+
+<section>
+
+    <div class="character-table">
+        <h2>Tabla de Personajes</h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (character of characters; track character) {
+                <tr>
+
+                    <td>{{ character.id }}</td>
+                    <td>{{ character.name }}</td>
+                    <td>{{ character.description }}</td>
+                </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
