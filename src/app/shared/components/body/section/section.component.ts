@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Character } from '../../../interfaces/Character';
+import {MatTableModule} from '@angular/material/table'; 
+
 @Component({
   selector: 'app-section',
   standalone: true,
-  imports: [],
+  imports: [MatTableModule,],
   templateUrl: './section.component.html',
   styles: ``,
 })

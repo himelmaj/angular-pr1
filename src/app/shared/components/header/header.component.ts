@@ -11,7 +11,7 @@ import { SectionComponent } from '../body/section/section.component';
   styles: ``
 })
 export class HeaderComponent {
-  sectionColor: string = 'bg-blue-500';
+  sectionColor: string = 'bg-violet-500';
 
   changeColor(color: string) {
     this.sectionColor = color;

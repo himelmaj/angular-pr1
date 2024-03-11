@@ -1,36 +1,44 @@
-<section class="">
+<section class=" select-none">
+    <h1 class="text-3xl font-bold text-white bg-stone-900 text-center">Characters</h1>
+
     @for (character of characters; track character) {
-    <article class="flex flex-col p-4 {{character.bg}}" id="{{character.id}}">
-        <img src="{{ character.img }}" alt="" class="w-20">
+    <article class="flex flex-col p-4 {{character.bg}} select-none" id="{{character.id}}">
+        <img src="{{ character.img }}" alt="" class="w-20 pointer-events-none">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{character.name}}</h5>
         <p class="mb-3 font-normal text-white">{{character.description}}</p>
     </article>
     }
 </section>
 
-<section>
+<section class="select-none">
 
-    <div class="character-table">
-        <h2>Tabla de Personajes</h2>
-        <table class="table-auto">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (character of characters; track character) {
-                <tr>
-
-                    <td>{{ character.id }}</td>
-                    <td>{{ character.name }}</td>
-                    <td>{{ character.description }}</td>
-                </tr>
-
-                }
-            </tbody>
-        </table>
+    <div class="w-full flex flex-col text-center justify-center">
+        <h1 class="text-3xl font-bold text-white bg-stone-900 ">Characters</h1>
+        <div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">ID</th>
+                        <th scope="col" class="px-6 py-3">Nombre</th>
+                        <th scope="col" class="px-6 py-3">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (character of characters; track character) {
+                    <tr class=" border-b text-white  dark:border-gray-700 " [className]="character.bg">
+                        <th scope="row" class="px-6 text-white py-4 font-medium whitespace-nowrap">
+                            {{ character.id }}
+                        </th>
+                        <td class="px-6 py-4 text-white">
+                            {{ character.name }}
+                        </td>
+                        <td class="px-6 py-4 text-white">
+                            {{ character.description }}
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </section>

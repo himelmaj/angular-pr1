@@ -10,6 +10,7 @@ import { Component, Input } from '@angular/core';
 export class ButtonColorComponent {
   @Input() title !: string;
   @Input() color !: string;
+  
 
 
 }

@@ -3,9 +3,21 @@
         <app-navbar></app-navbar>
 
         <div class="flex gap-2">
-            <app-button-color [title]="'orange'" (click)="changeColor('bg-orange-500')" [color]="'bg-orange-500'"></app-button-color>
+            @if (sectionColor != 'bg-orange-500') {
+                <app-button-color [title]="'orange'" (click)="changeColor('bg-orange-500')" [color]="'bg-orange-500'"></app-button-color>
+
+            }
+            @if (sectionColor != 'bg-red-500') {
+                <app-button-color [title]="'red'" (click)="changeColor('bg-red-500')" [color]="'bg-red-500'"></app-button-color>
+            }
+
+            @if (sectionColor != 'bg-blue-500') {
+                <app-button-color [title]="'blue'" (click)="changeColor('bg-blue-500')" [color]="'bg-blue-500'"></app-button-color>
+            }
+            
+            <!-- <app-button-color [title]="'orange'" (click)="changeColor('bg-orange-500')" [color]="'bg-orange-500'"></app-button-color>
             <app-button-color [title]="'red'" (click)="changeColor('bg-red-500')" [color]="'bg-red-500'"></app-button-color>
-            <app-button-color [title]="'blue'" (click)="changeColor('bg-blue-500')" [color]="'bg-blue-500'"></app-button-color>
+            <app-button-color [title]="'blue'" (click)="changeColor('bg-blue-500')" [color]="'bg-blue-500'"></app-button-color> -->
         </div>
 
     </div>
